@@ -71,7 +71,7 @@ export const throttle = <T extends (...args: any[]) => any>(
 
 // Utility function to generate unique IDs
 export const generateId = (prefix: string = 'id'): string => {
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+  return `${prefix}-${Math.random().toString(36).substring(2, 11)}`;
 };
 
 // Utility function to validate email
