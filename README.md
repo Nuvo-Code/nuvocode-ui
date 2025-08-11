@@ -56,6 +56,173 @@ export default App;
 
 ## Components
 
+### Button Components
+
+#### Button
+A versatile button component with multiple variants and states.
+
+```tsx
+import { Button } from 'nuvocode-ui';
+
+<Button variant="primary" size="md" loading={false}>
+  Click me
+</Button>
+
+// With icons
+<Button variant="gradient" startIcon={<Icon />} endIcon={<Icon />}>
+  Action Button
+</Button>
+```
+
+**Props:**
+- `variant`: 'primary' | 'secondary' | 'gradient' | 'ghost' | 'danger'
+- `size`: 'sm' | 'md' | 'lg'
+- `loading`: boolean
+- `fullWidth`: boolean
+- `startIcon`, `endIcon`: React.ReactNode
+
+### Form Components
+
+#### TextField
+Text input component with label, validation, and icon support.
+
+```tsx
+import { TextField } from 'nuvocode-ui';
+
+<TextField
+  label="Email"
+  placeholder="Enter your email"
+  error="Invalid email"
+  startIcon={<EmailIcon />}
+  fullWidth
+/>
+```
+
+#### Select
+Dropdown select component with options.
+
+```tsx
+import { Select } from 'nuvocode-ui';
+
+<Select
+  label="Country"
+  options={[
+    { value: 'us', label: 'United States' },
+    { value: 'ca', label: 'Canada' }
+  ]}
+  placeholder="Select country"
+/>
+```
+
+#### FormControl
+Wrapper component for form fields with label and validation.
+
+```tsx
+import { FormControl } from 'nuvocode-ui';
+
+<FormControl label="Username" required error="Username is required">
+  <input type="text" />
+</FormControl>
+```
+
+### Modal Components
+
+#### Modal
+Base modal component with backdrop and animations.
+
+```tsx
+import { Modal } from 'nuvocode-ui';
+
+<Modal
+  open={isOpen}
+  onClose={() => setIsOpen(false)}
+  title="Modal Title"
+  size="md"
+>
+  Modal content here
+</Modal>
+```
+
+#### Dialog
+Enhanced modal with structured content and actions.
+
+```tsx
+import { Dialog } from 'nuvocode-ui';
+
+<Dialog
+  open={isOpen}
+  onClose={() => setIsOpen(false)}
+  title="Confirm Action"
+  description="Are you sure you want to proceed?"
+  actions={[
+    { label: 'Cancel', onClick: handleCancel, variant: 'secondary' },
+    { label: 'Confirm', onClick: handleConfirm, variant: 'primary' }
+  ]}
+/>
+```
+
+### Alert Components
+
+#### Alert
+Inline alert messages with different severity levels.
+
+```tsx
+import { Alert } from 'nuvocode-ui';
+
+<Alert severity="success" title="Success!" closable>
+  Operation completed successfully
+</Alert>
+```
+
+#### Toast
+Floating notification system with auto-dismiss.
+
+```tsx
+import { Toast, ToastContainer } from 'nuvocode-ui';
+
+<ToastContainer
+  position="top-right"
+  toasts={[
+    {
+      id: '1',
+      severity: 'info',
+      message: 'This is a toast notification',
+      duration: 5000
+    }
+  ]}
+/>
+```
+
+### Card Components
+
+#### Card
+Flexible card component with header, content, and footer sections.
+
+```tsx
+import { Card, CardHeader, CardContent, CardFooter } from 'nuvocode-ui';
+
+<Card variant="gradient" hoverable>
+  <CardHeader title="Card Title" subtitle="Card subtitle" />
+  <CardContent>
+    Card content goes here
+  </CardContent>
+  <CardFooter>
+    <Button>Action</Button>
+  </CardFooter>
+</Card>
+```
+
+#### Container
+Responsive container with size and padding options.
+
+```tsx
+import { Container } from 'nuvocode-ui';
+
+<Container size="lg" padding="md" centered>
+  Your content here
+</Container>
+```
+
 ### Layout Components
 
 #### Navbar

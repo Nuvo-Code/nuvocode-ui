@@ -1,30 +1,40 @@
 /* NuvoCode UI Library - Global Styles */
 
 :root {
-  /* Colors */
-  --primary-bg: #030718;
-  --secondary-bg: #0a0f2e;
-  --text-primary: #ffffff;
-  --text-secondary: #a0a9c0;
-  --text-muted: #6b7280;
-  
-  /* Neon Colors */
-  --neon-purple: #9d4edd;
-  --neon-blue: #3b82f6;
-  --neon-green: #00ff7f;
-  --neon-pink: #ec4899;
-  --neon-cyan: #06b6d4;
+  /* Core Colors - Matching main project */
+  --midnight-blue: #050A24;
+  --deep-purple: #1A0F40;
+  --neon-blue: #00BFFF;
+  --neon-purple: #9D4EDD;
+  --neon-green: #00FF7F;
+  --dark-bg: #030718;
+
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8B8D0;
+  --text-tertiary: #8888A0;
+
+  /* Component Colors */
+  --border-primary: rgba(157, 78, 221, 0.3);
+  --border-hover: rgba(157, 78, 221, 0.5);
+  --border-focus: var(--neon-purple);
+  --background-overlay: rgba(0, 0, 0, 0.8);
+  --background-card: linear-gradient(to bottom right, var(--midnight-blue), var(--deep-purple));
+  --background-input: rgba(255, 255, 255, 0.05);
+  --background-hover: rgba(255, 255, 255, 0.1);
   
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-blue) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--neon-pink) 0%, var(--neon-purple) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
+  --gradient-card: linear-gradient(to bottom right, var(--midnight-blue), var(--deep-purple));
   
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-neon: 0 0 20px rgba(157, 78, 221, 0.3);
+  --shadow-glow: 0 0 20px rgba(157, 78, 221, 0.3);
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(157, 78, 221, 0.1);
   
   /* Spacing */
   --space-xs: 0.25rem;

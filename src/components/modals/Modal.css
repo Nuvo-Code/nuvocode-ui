@@ -1,0 +1,174 @@
+/* Modal Component Styles */
+.nuvocode-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-overlay);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.nuvocode-modal {
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  border: 1px solid var(--border-primary);
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+}
+
+/* Sizes */
+.nuvocode-modal--sm {
+  width: 100%;
+  max-width: 400px;
+}
+
+.nuvocode-modal--md {
+  width: 100%;
+  max-width: 500px;
+}
+
+.nuvocode-modal--lg {
+  width: 100%;
+  max-width: 700px;
+}
+
+.nuvocode-modal--xl {
+  width: 100%;
+  max-width: 900px;
+}
+
+.nuvocode-modal--full {
+  width: 95vw;
+  height: 95vh;
+  max-width: none;
+  max-height: none;
+}
+
+/* Header */
+.nuvocode-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-primary);
+  flex-shrink: 0;
+}
+
+.nuvocode-modal__title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.nuvocode-modal__close-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.nuvocode-modal__close-button:hover {
+  background-color: var(--background-hover);
+  color: var(--text-primary);
+}
+
+.nuvocode-modal__close-button:focus-visible {
+  outline: 2px solid var(--neon-purple);
+  outline-offset: 2px;
+}
+
+.nuvocode-modal__close-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Content */
+.nuvocode-modal__content {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .nuvocode-modal-backdrop {
+    padding: 0.5rem;
+  }
+  
+  .nuvocode-modal--sm,
+  .nuvocode-modal--md,
+  .nuvocode-modal--lg,
+  .nuvocode-modal--xl {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  
+  .nuvocode-modal__header {
+    padding: 1rem;
+  }
+  
+  .nuvocode-modal__content {
+    padding: 1rem;
+  }
+  
+  .nuvocode-modal__title {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .nuvocode-modal--full {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+/* Focus trap styles */
+.nuvocode-modal *:focus-visible {
+  outline: 2px solid var(--neon-purple);
+  outline-offset: 2px;
+}

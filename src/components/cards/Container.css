@@ -1,0 +1,76 @@
+/* Container Component Styles */
+.nuvocode-container {
+  width: 100%;
+}
+
+.nuvocode-container--centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sizes */
+.nuvocode-container--sm {
+  max-width: 640px;
+}
+
+.nuvocode-container--md {
+  max-width: 768px;
+}
+
+.nuvocode-container--lg {
+  max-width: 1024px;
+}
+
+.nuvocode-container--xl {
+  max-width: 1280px;
+}
+
+.nuvocode-container--full {
+  max-width: none;
+}
+
+/* Padding */
+.nuvocode-container--padding-sm {
+  padding: 0.5rem;
+}
+
+.nuvocode-container--padding-md {
+  padding: 1rem;
+}
+
+.nuvocode-container--padding-lg {
+  padding: 1.5rem;
+}
+
+.nuvocode-container--padding-xl {
+  padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .nuvocode-container--padding-sm {
+    padding: 0.75rem;
+  }
+  
+  .nuvocode-container--padding-md {
+    padding: 1.5rem;
+  }
+  
+  .nuvocode-container--padding-lg {
+    padding: 2rem;
+  }
+  
+  .nuvocode-container--padding-xl {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nuvocode-container--padding-lg {
+    padding: 2.5rem;
+  }
+  
+  .nuvocode-container--padding-xl {
+    padding: 3rem;
+  }
+}

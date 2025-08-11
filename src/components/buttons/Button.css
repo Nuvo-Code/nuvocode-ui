@@ -1,0 +1,182 @@
+/* Button Component Styles */
+.nuvocode-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  outline: none;
+}
+
+.nuvocode-btn:focus-visible {
+  outline: 2px solid var(--neon-purple);
+  outline-offset: 2px;
+}
+
+/* Sizes */
+.nuvocode-btn--sm {
+  padding: 0.375rem 0.75rem;
+  font-size: var(--font-size-sm);
+  line-height: 1.25;
+}
+
+.nuvocode-btn--md {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+.nuvocode-btn--lg {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-lg);
+  line-height: 1.5;
+}
+
+/* Full Width */
+.nuvocode-btn--full-width {
+  width: 100%;
+}
+
+/* Variants */
+.nuvocode-btn--primary {
+  background-color: var(--neon-purple);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.nuvocode-btn--primary:hover:not(.nuvocode-btn--disabled) {
+  background-color: rgba(157, 78, 221, 0.8);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow), var(--shadow-lg);
+}
+
+.nuvocode-btn--primary:active:not(.nuvocode-btn--disabled) {
+  transform: translateY(0);
+}
+
+.nuvocode-btn--secondary {
+  background-color: rgba(157, 78, 221, 0.1);
+  color: var(--neon-purple);
+  border: 1px solid var(--border-primary);
+}
+
+.nuvocode-btn--secondary:hover:not(.nuvocode-btn--disabled) {
+  background-color: var(--neon-purple);
+  color: white;
+  border-color: var(--neon-purple);
+}
+
+.nuvocode-btn--gradient {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.nuvocode-btn--gradient:hover:not(.nuvocode-btn--disabled) {
+  background: var(--gradient-secondary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow), var(--shadow-lg);
+}
+
+.nuvocode-btn--ghost {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+}
+
+.nuvocode-btn--ghost:hover:not(.nuvocode-btn--disabled) {
+  background-color: var(--background-hover);
+  color: var(--text-primary);
+}
+
+.nuvocode-btn--danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.nuvocode-btn--danger:hover:not(.nuvocode-btn--disabled) {
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+}
+
+/* Disabled State */
+.nuvocode-btn--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.nuvocode-btn--primary.nuvocode-btn--disabled {
+  background-color: rgba(157, 78, 221, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+
+/* Loading State */
+.nuvocode-btn--loading {
+  cursor: wait;
+}
+
+.nuvocode-btn--loading .nuvocode-btn__text {
+  opacity: 0.7;
+}
+
+/* Icons */
+.nuvocode-btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nuvocode-btn__icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* Spinner */
+.nuvocode-btn__spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nuvocode-btn__spinner-icon {
+  width: 1em;
+  height: 1em;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text */
+.nuvocode-btn__text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .nuvocode-btn--lg {
+    padding: 0.625rem 1.25rem;
+    font-size: var(--font-size-base);
+  }
+}

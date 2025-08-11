@@ -1,0 +1,128 @@
+/* Toast Component Styles */
+.nuvocode-toast {
+  margin-bottom: 0.75rem;
+  animation: slideIn 0.3s ease-out;
+  max-width: 400px;
+  width: 100%;
+}
+
+.nuvocode-toast:last-child {
+  margin-bottom: 0;
+}
+
+/* Toast Container */
+.nuvocode-toast-container {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.nuvocode-toast-container * {
+  pointer-events: auto;
+}
+
+/* Positions */
+.nuvocode-toast-container--top-right {
+  top: 0;
+  right: 0;
+}
+
+.nuvocode-toast-container--top-left {
+  top: 0;
+  left: 0;
+}
+
+.nuvocode-toast-container--bottom-right {
+  bottom: 0;
+  right: 0;
+  flex-direction: column-reverse;
+}
+
+.nuvocode-toast-container--bottom-left {
+  bottom: 0;
+  left: 0;
+  flex-direction: column-reverse;
+}
+
+.nuvocode-toast-container--top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.nuvocode-toast-container--bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Position-specific animations */
+.nuvocode-toast-container--top-left .nuvocode-toast,
+.nuvocode-toast-container--bottom-left .nuvocode-toast {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+.nuvocode-toast-container--top-center .nuvocode-toast,
+.nuvocode-toast-container--bottom-center .nuvocode-toast {
+  animation: slideInDown 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .nuvocode-toast-container {
+    padding: 0.5rem;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+  }
+  
+  .nuvocode-toast {
+    max-width: none;
+  }
+  
+  .nuvocode-toast-container--top-center,
+  .nuvocode-toast-container--bottom-center {
+    align-items: stretch;
+  }
+}

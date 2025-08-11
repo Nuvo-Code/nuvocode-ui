@@ -1,0 +1,72 @@
+/* FormControl Component Styles */
+.nuvocode-form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nuvocode-form-control--full-width {
+  width: 100%;
+}
+
+/* Label */
+.nuvocode-form-control__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nuvocode-form-control--error .nuvocode-form-control__label {
+  color: #dc2626;
+}
+
+.nuvocode-form-control--disabled .nuvocode-form-control__label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Required Indicator */
+.nuvocode-form-control__required {
+  color: #dc2626;
+  font-weight: var(--font-weight-bold);
+  margin-left: 0.125rem;
+}
+
+/* Content */
+.nuvocode-form-control__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nuvocode-form-control--disabled .nuvocode-form-control__content {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Helper Text */
+.nuvocode-form-control__helper-text {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+.nuvocode-form-control--error .nuvocode-form-control__helper-text {
+  color: #dc2626;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .nuvocode-form-control__label {
+    font-size: var(--font-size-xs);
+  }
+  
+  .nuvocode-form-control__helper-text {
+    font-size: 0.6875rem;
+  }
+}

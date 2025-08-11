@@ -1,0 +1,179 @@
+/* TextField Component Styles */
+.nuvocode-textfield {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nuvocode-textfield--full-width {
+  width: 100%;
+}
+
+/* Label */
+.nuvocode-textfield__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.nuvocode-textfield--error .nuvocode-textfield__label {
+  color: #dc2626;
+}
+
+/* Input Wrapper */
+.nuvocode-textfield__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Input */
+.nuvocode-textfield__input {
+  width: 100%;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  background-color: var(--background-input);
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-normal);
+  outline: none;
+  font-family: inherit;
+}
+
+.nuvocode-textfield__input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.nuvocode-textfield__input:hover {
+  border-color: var(--border-hover);
+}
+
+.nuvocode-textfield__input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.1);
+}
+
+.nuvocode-textfield--error .nuvocode-textfield__input {
+  border-color: #dc2626;
+}
+
+.nuvocode-textfield--error .nuvocode-textfield__input:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Sizes */
+.nuvocode-textfield--sm .nuvocode-textfield__input {
+  padding: 0.375rem 0.75rem;
+  font-size: var(--font-size-sm);
+}
+
+.nuvocode-textfield--md .nuvocode-textfield__input {
+  padding: 0.5rem 0.75rem;
+  font-size: var(--font-size-base);
+}
+
+.nuvocode-textfield--lg .nuvocode-textfield__input {
+  padding: 0.75rem 1rem;
+  font-size: var(--font-size-lg);
+}
+
+/* With Icons */
+.nuvocode-textfield--has-icons.nuvocode-textfield--sm .nuvocode-textfield__input {
+  padding-left: 2.25rem;
+}
+
+.nuvocode-textfield--has-icons.nuvocode-textfield--md .nuvocode-textfield__input {
+  padding-left: 2.5rem;
+}
+
+.nuvocode-textfield--has-icons.nuvocode-textfield--lg .nuvocode-textfield__input {
+  padding-left: 3rem;
+}
+
+.nuvocode-textfield__icon--end + .nuvocode-textfield__input,
+.nuvocode-textfield--has-icons.nuvocode-textfield--sm .nuvocode-textfield__input:has(~ .nuvocode-textfield__icon--end) {
+  padding-right: 2.25rem;
+}
+
+.nuvocode-textfield--has-icons.nuvocode-textfield--md .nuvocode-textfield__input:has(~ .nuvocode-textfield__icon--end) {
+  padding-right: 2.5rem;
+}
+
+.nuvocode-textfield--has-icons.nuvocode-textfield--lg .nuvocode-textfield__input:has(~ .nuvocode-textfield__icon--end) {
+  padding-right: 3rem;
+}
+
+/* Icons */
+.nuvocode-textfield__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.nuvocode-textfield__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.nuvocode-textfield__icon--start {
+  left: 0.75rem;
+}
+
+.nuvocode-textfield__icon--end {
+  right: 0.75rem;
+}
+
+.nuvocode-textfield--sm .nuvocode-textfield__icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nuvocode-textfield--lg .nuvocode-textfield__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Helper Text */
+.nuvocode-textfield__helper-text {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin-top: 0.25rem;
+}
+
+.nuvocode-textfield--error .nuvocode-textfield__helper-text {
+  color: #dc2626;
+}
+
+/* Variants */
+.nuvocode-textfield--filled .nuvocode-textfield__input {
+  background-color: var(--background-hover);
+  border: 1px solid transparent;
+}
+
+.nuvocode-textfield--filled .nuvocode-textfield__input:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nuvocode-textfield--filled .nuvocode-textfield__input:focus {
+  background-color: var(--background-input);
+  border-color: var(--border-focus);
+}
+
+/* Disabled State */
+.nuvocode-textfield__input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Focus visible for accessibility */
+.nuvocode-textfield__input:focus-visible {
+  outline: 2px solid var(--neon-purple);
+  outline-offset: 2px;
+}
