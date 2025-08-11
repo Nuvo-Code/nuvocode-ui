@@ -1,4 +1,4 @@
-# @nuvocode/ui-library
+# Nuvo Code UI
 
 A comprehensive React UI component library built with TypeScript, designed for modern web applications with space-themed aesthetics and internationalization support.
 
@@ -15,11 +15,11 @@ A comprehensive React UI component library built with TypeScript, designed for m
 ## Installation
 
 ```bash
-npm install @nuvocode/ui-library
+npm install nuvocode-ui
 # or
-yarn add @nuvocode/ui-library
+yarn add nuvocode-ui
 # or
-pnpm add @nuvocode/ui-library
+pnpm add nuvocode-ui
 ```
 
 ## Peer Dependencies
@@ -34,8 +34,8 @@ npm install react react-dom react-i18next i18next
 
 ```tsx
 import React from 'react';
-import { Navbar, LanguageProvider } from '@nuvocode/ui-library';
-import '@nuvocode/ui-library/dist/index.css';
+import { Navbar, LanguageProvider } from 'nuvocode-ui';
+import 'nuvocode-ui/dist/index.css';
 
 function App() {
   return (
@@ -62,7 +62,7 @@ export default App;
 A responsive navigation bar with mobile menu support.
 
 ```tsx
-import { Navbar } from '@nuvocode/ui-library';
+import { Navbar } from 'nuvocode-ui';
 
 <Navbar 
   logoSrc="/logo.png"
@@ -79,7 +79,7 @@ import { Navbar } from '@nuvocode/ui-library';
 A dropdown component for language selection.
 
 ```tsx
-import { LanguageSelector } from '@nuvocode/ui-library';
+import { LanguageSelector } from 'nuvocode-ui';
 
 <LanguageSelector 
   availableLanguages={['en', 'tr', 'et']}
@@ -93,7 +93,7 @@ import { LanguageSelector } from '@nuvocode/ui-library';
 Shows online/offline status with customizable messages.
 
 ```tsx
-import { NetworkStatus } from '@nuvocode/ui-library';
+import { NetworkStatus } from 'nuvocode-ui';
 
 <NetworkStatus 
   onlineMessage="Connected"
@@ -108,7 +108,7 @@ import { NetworkStatus } from '@nuvocode/ui-library';
 Hook for tracking scroll position.
 
 ```tsx
-import { useScroll } from '@nuvocode/ui-library';
+import { useScroll } from 'nuvocode-ui';
 
 const Component = () => {
   const scrolled = useScroll(100); // threshold in pixels
