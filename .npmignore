@@ -1,0 +1,41 @@
+# Source files
+src/
+.storybook/
+
+# Development files
+*.stories.tsx
+*.test.tsx
+*.test.ts
+*.spec.tsx
+*.spec.ts
+
+# Configuration files
+rollup.config.js
+jest.config.js
+.eslintrc.js
+tsconfig.json
+
+# Development dependencies
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Coverage
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# Storybook
+storybook-static/

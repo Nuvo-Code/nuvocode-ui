@@ -1,0 +1,106 @@
+/* Network Status Component */
+.network-status {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(157, 78, 221, 0.1);
+  animation: slideIn 0.3s ease-out;
+  max-width: 300px;
+}
+
+.network-status.online {
+  background: rgba(0, 255, 127, 0.1);
+  border-color: rgba(0, 255, 127, 0.3);
+}
+
+.network-status.offline {
+  background: rgba(255, 69, 58, 0.1);
+  border-color: rgba(255, 69, 58, 0.3);
+}
+
+.network-status-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.network-status.online .status-dot {
+  background: var(--neon-green, #00ff7f);
+  box-shadow: 0 0 10px var(--neon-green, #00ff7f);
+}
+
+.network-status.offline .status-dot {
+  background: #ff453a;
+  box-shadow: 0 0 10px #ff453a;
+}
+
+.offline-btn {
+  background: rgba(157, 78, 221, 0.2);
+  border: 1px solid var(--neon-purple, #9d4edd);
+  color: var(--neon-purple, #9d4edd);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offline-btn:hover {
+  background: var(--neon-purple, #9d4edd);
+  color: white;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .network-status {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+  
+  .network-status-content {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
